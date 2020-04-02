@@ -3,12 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bottin", "Inventaire\Bottin.csproj", "{508AF97C-C689-4057-851B-B163F89FCC77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillingManagement.UI", "Inventaire\BillingManagement.UI.csproj", "{508AF97C-C689-4057-851B-B163F89FCC77}"
 	ProjectSection(ProjectDependencies) = postProject
 		{58FEC7DF-7358-4AFF-BFEC-225473BF7854} = {58FEC7DF-7358-4AFF-BFEC-225473BF7854}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "app_models", "app_models\app_models.csproj", "{58FEC7DF-7358-4AFF-BFEC-225473BF7854}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillingManagement.Models", "app_models\BillingManagement.Models.csproj", "{58FEC7DF-7358-4AFF-BFEC-225473BF7854}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
