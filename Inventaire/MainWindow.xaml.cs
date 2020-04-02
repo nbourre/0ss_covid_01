@@ -11,6 +11,8 @@ namespace Inventaire
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+    // 3.1 Small modfis. for git commit
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         CustomersDataService customersDataService = new CustomersDataService();
