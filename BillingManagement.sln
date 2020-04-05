@@ -8,7 +8,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bottin", "Inventaire\Bottin
 		{58FEC7DF-7358-4AFF-BFEC-225473BF7854} = {58FEC7DF-7358-4AFF-BFEC-225473BF7854}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "app_models", "app_models\app_models.csproj", "{58FEC7DF-7358-4AFF-BFEC-225473BF7854}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillingManagement.Models", "app_models\BillingManagement.Models.csproj", "{58FEC7DF-7358-4AFF-BFEC-225473BF7854}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

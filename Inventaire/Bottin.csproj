@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\app_models\app_models.csproj" />
+    <ProjectReference Include="..\app_models\BillingManagement.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>
