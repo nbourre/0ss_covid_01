@@ -1,4 +1,5 @@
 ﻿using app_models;
+using BillingManagement.UI.ViewModels;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -18,7 +19,15 @@ namespace Inventaire
         private ObservableCollection<Customer> customers;
         private Customer selectedCustomer;
 
-        public ObservableCollection<Customer> Customers { 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName]string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public ObservableCollection<Customer> Customers
+        {
             get => customers;
             private set
             {
@@ -27,7 +36,8 @@ namespace Inventaire
             }
         }
 
-        public Customer SelectedCustomer { 
+        public Customer SelectedCustomer
+        {
             get => selectedCustomer;
             set
             {
@@ -36,25 +46,18 @@ namespace Inventaire
             }
         }
 
+        private void InitValues()
+        {
+            Customers = new ObservableCollection<Customer>(customersDataService.GetAll());
+        }
+
         public MainWindow()
         {
             InitializeComponent();
             InitValues();
+
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged([CallerMemberName]string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        private void InitValues()
-        {
-            Customers = new ObservableCollection<Customer>(customersDataService.GetAll());
-            Debug.WriteLine(Customers.Count);
-        }
-
+        
         private void CustomerNew_Click(object sender, RoutedEventArgs e)
         {
             Customer temp = new Customer() { Name = "Undefined", LastName = "Undefined" };
@@ -73,6 +76,11 @@ namespace Inventaire
 
             lvCustomers.SelectedIndex = currentIndex;
 
+        }
+
+        private void Quitter_Click(object sender, RoutedEventArgs e)
+        {
+            Close(); //pour quitter 
         }
     }
 }
